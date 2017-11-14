@@ -1,6 +1,6 @@
 Package: dataCompareR
 Title: Compare Two Data Frames and Summarise the Difference
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person("Rob", "Noble-Eddy", email = "opensource@capitalone.com", role = c("aut", "cre")),
            person("Sarah", "Johnston", role = c("aut")),
            person("Sarah", "Pollicott", role = c("aut")),
@@ -28,14 +28,16 @@ Description: Easy comparison of two tabular data
     to offer a more useful output than all.equal() when your two data sets do not
     match, but isn't intended to replace all.equal() as a way to test for equality.
 Depends: R (>= 3.2.3)
-Imports: dplyr, knitr, stringi, markdown
+Imports: dplyr (>= 0.5.0), knitr, stringi, markdown
+URL: https://github.com/capitalone/dataCompareR
+BugReports: https://github.com/capitalone/dataCompareR/issues
 License: Apache License 2.0 | file LICENSE
 LazyData: true
 RoxygenNote: 6.0.1
 Suggests: testthat, data.table, tibble, bit64, rmarkdown, titanic
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2017-07-17 10:47:12 UTC; ODY153
+Packaged: 2017-11-10 15:31:21 UTC; rob
 Author: Rob Noble-Eddy [aut, cre],
   Sarah Johnston [aut],
   Sarah Pollicott [aut],
@@ -57,4 +59,4 @@ Author: Rob Noble-Eddy [aut, cre],
   Carola Deppe [ctb]
 Maintainer: Rob Noble-Eddy <opensource@capitalone.com>
 Repository: CRAN
-Date/Publication: 2017-07-17 17:16:22 UTC
+Date/Publication: 2017-11-14 09:01:03 UTC

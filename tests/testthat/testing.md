@@ -2,9 +2,9 @@
 Data Comparison
 ===============
 
-Date comparison run: 2017-07-17 11:41:20  
-Comparison run on R version 3.4.1 (2017-06-30)  
-With dataCompareR version 0.1.0  
+Date comparison run: 2017-11-10 15:21:25  
+Comparison run on R version 3.4.0 (2017-04-21)  
+With dataCompareR version 0.1.1  
 
 
 Meta Summary

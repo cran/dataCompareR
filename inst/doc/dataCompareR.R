@@ -22,7 +22,7 @@ compIris <- rCompare(iris, iris2)
 summary(compIris)
 
 
-## ----saveReps, eval =F---------------------------------------------------
+## ----saveReps, eval = FALSE----------------------------------------------
 #  # Write the summary to a file
 #  saveReport(compIris, reportName = 'compIris')
 
@@ -47,7 +47,7 @@ compPressure <- rCompare(pressure, pressure2, keys = 'temperature')
 # Check the results - use print for a quick summary
 print(compPressure)
 
-## ----loaddplyr, echo = F, message=F--------------------------------------
+## ----loaddplyr, echo = FALSE, message= FALSE-----------------------------
 library(dplyr)
 
 ## ----extract-------------------------------------------------------------

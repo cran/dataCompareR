@@ -5,7 +5,7 @@
 \title{Compare two data frames}
 \usage{
 rCompare(dfA, dfB, keys = NA, roundDigits = NA, mismatches = NA,
-  trimChars = F)
+  trimChars = FALSE)
 }
 \arguments{
 \item{dfA}{data frame. The first data object. dataCompareR will attempt to coerce all data objects to data frames.}
@@ -15,8 +15,8 @@ rCompare(dfA, dfB, keys = NA, roundDigits = NA, mismatches = NA,
 \item{keys}{String. Name of identifier column(s) used to compare dfA and dfB. NA if no identifier (row order will be used instead), 
 a character for a single column name, or a vector of column names to match of multiple columns}
 
-\item{roundDigits}{Integer. If NA, numerics are not rounded before comparison. If \code{roundDigits} is specified, numerics are 
-rounded to \code{roundDigits} decimal places using \link[base]{round}.}
+\item{roundDigits}{Integer. If NA, numerics are not rounded before comparison. If specified, numerics are 
+rounded to the specified number of decimal places using \link[base]{round}.}
 
 \item{mismatches}{Integer. The max number of mismatches to assess, after which dataCompareR will stop (without producing an dataCompareR 
 object). Designed to improve performance for large data sets.}
