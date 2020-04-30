@@ -1,4 +1,4 @@
-## ----matchnokey----------------------------------------------------------
+## ----matchnokey---------------------------------------------------------------
 library(dataCompareR)
 
 # We'll use iris for our comparison
@@ -13,20 +13,20 @@ iris2$Petal.Width <- NULL
 # And then changing some values
 iris2[1:10,1] <- iris2[1:10,1] + 1
 
-## ----runcomp-------------------------------------------------------------
+## ----runcomp------------------------------------------------------------------
 # run the comparison
 compIris <- rCompare(iris, iris2)
 
-## ----results-------------------------------------------------------------
+## ----results------------------------------------------------------------------
 # Check the results
 summary(compIris)
 
 
-## ----saveReps, eval = FALSE----------------------------------------------
+## ----saveReps, eval = FALSE---------------------------------------------------
 #  # Write the summary to a file
 #  saveReport(compIris, reportName = 'compIris')
 
-## ----matchkey------------------------------------------------------------
+## ----matchkey-----------------------------------------------------------------
 # We'll use the pressure dataset for comparison
 head(pressure)
 
@@ -39,18 +39,18 @@ pressure2[5,1]
 # We modify pressure to be twice as large
 pressure2[5,2] <- pressure2[5,2] * 2
 
-## ----matchkeycomp--------------------------------------------------------
+## ----matchkeycomp-------------------------------------------------------------
 # run the comparison
 compPressure <- rCompare(pressure, pressure2, keys = 'temperature')
 
-## ----matchkeyprint-------------------------------------------------------
+## ----matchkeyprint------------------------------------------------------------
 # Check the results - use print for a quick summary
 print(compPressure)
 
-## ----loaddplyr, echo = FALSE, message= FALSE-----------------------------
+## ----loaddplyr, echo = FALSE, message= FALSE----------------------------------
 library(dplyr)
 
-## ----extract-------------------------------------------------------------
+## ----extract------------------------------------------------------------------
 # use generateMismatchData to pull out the mismatching rows from each table
 mismatches <- generateMismatchData(compPressure, pressure, pressure2)
 
