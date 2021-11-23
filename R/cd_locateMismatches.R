@@ -14,7 +14,7 @@
 #' collapseClasses. Collapse the classes of an object to a single string
 #'
 #' @param x any object
-#' @return a string listing the classes of x, seperated by commas
+#' @return a string listing the classes of x, separated by commas
 #'
 #' @examples 
 #'\dontrun{collapseClasses(iris)}
@@ -26,7 +26,7 @@ collapseClasses <- function(x) {
 #' mismatchHighStop Checks if we've exceeded threshold of mismatches
 #'
 #' @param trueFalseMatrix a matrix of true/false
-#' @param maxMismatches number of mismatches at which the routine stopes
+#' @param maxMismatches number of mismatches at which the routine stops
 #' @return Nothing. Stops if threshold exceeded
 
 mismatchHighStop <- function(trueFalseMatrix, maxMismatches) {
@@ -96,15 +96,15 @@ locateMismatches <- function(DFA, DFB, keys=NULL, maxMismatches=NA){
       subsetB <- select_(DFB,.dots = cols2Diff)
       
       # Look for NA's
-      isNA_A <- mutate_all(subsetA, funs(is.na))
-      isNA_B <- mutate_all(subsetB, funs(is.na))
+      isNA_A <- mutate_all(subsetA, .funs = is.na)
+      isNA_B <- mutate_all(subsetB, .funs = is.na)
       
       # Find any cells impacted by NA's
       anyNA <- isNA_A | isNA_B
       
       # and repeat the above for NAN's
-      isNaN_A <- mutate_all(subsetA, funs(is.nan))
-      isNaN_B <- mutate_all(subsetB, funs(is.nan))
+      isNaN_A <- mutate_all(subsetA, .funs = is.nan)
+      isNaN_B <- mutate_all(subsetB, .funs = is.nan)
       anyNaN <- isNaN_A | isNaN_B
       
       # find matching NA or NaNs
